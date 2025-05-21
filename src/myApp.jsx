@@ -1,7 +1,7 @@
 
 import Sample from "./Sample";
 
-function myApp() {
+function MyApp() {
     const myName = "MATHU";
     const myAge = 19;
     const myHobby = "SINGING";
@@ -13,4 +13,4 @@ function myApp() {
     );
 }
 
-export default myApp;
+export default MyApp;
