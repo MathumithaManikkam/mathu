@@ -1,20 +1,23 @@
 import Input from 'costuminputg'
 import { useState } from 'react'
-
+import { Link } from "react-router-dom"
 const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const handileSubmit = () => {
+        e.preventDefault()
         console.log(email)
 
-console.log(password)   
- }
+        console.log(password)
+        setEmail("")
+        setPassword("")
+    }
 
     return (
         <center>
             <div className="item-center justify-center w-150 h-full mt-50 bg-red-100">
 
-                <form  onSubmit={handileSubmit}>
+                <form onSubmit={handileSubmit}>
                     <Input
                         type='email'
                         label='Email address'
@@ -34,6 +37,7 @@ console.log(password)
                     />
                     <button className=' bg-blue-600 w-full mp-4' type='submit'>Login</button>
                 </form>
+                <p>New User? <Link to="Register">Register</Link></p>
             </div>
         </center>
     )
